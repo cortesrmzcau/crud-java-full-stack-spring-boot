@@ -14,10 +14,8 @@ async function registerUser() {
     let confirPassword = document.getElementById('txtConfirmPassword').value;
 
     if(confirPassword != data.password) {
-        return console.log('La contraseña es diferente');
+        alert('La contraseña es diferente');
     }
-
-    console.log(data);
 
     const response = await fetch('api/users', {
         method: 'POST',
